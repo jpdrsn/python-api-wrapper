@@ -63,7 +63,7 @@ def update_lookup(base_url, cribl_auth_token, update_config, lookup_id, worker_g
             return patch(base_url + "/system/lookups/" + lookup_id,
                         headers=headers, payload=payload, verify=verify, use_session=use_session)
     except Exception as e:
-        raise Exception("General exception raised while attempting to create lookup: %s " % str(e))
+        raise Exception("General exception raised while attempting to update lookup: %s " % str(e))
 
 
 def export_lookup_file(base_url, cribl_auth_token, lookup_filename, save_to_directory=".",
